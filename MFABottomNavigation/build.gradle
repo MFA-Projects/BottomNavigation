@@ -1,5 +1,9 @@
 plugins {
-    alias(libs.plugins.android.library)
+//    alias(libs.plugins.android.application)
+//    alias(libs.plugins.android.library)
+
+    id 'com.android.application'
+//    id 'com.android.library'
     id 'maven-publish'
 }
 
@@ -34,15 +38,13 @@ android {
 
 dependencies {
 
-//    implementation libs.appcompat
-//    implementation libs.material
-//    testImplementation libs.junit
-//    androidTestImplementation libs.ext.junit
-//    androidTestImplementation libs.espresso.core
+    implementation libs.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
 
     implementation libs.glide
-    implementation libs.cardview
-    implementation libs.material
 }
 afterEvaluate {
     publishing {
